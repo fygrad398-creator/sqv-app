@@ -1,0 +1,41 @@
+:root {--sqv-purple:#6852e8;--sqv-ink:#242333;--sqv-muted:#777583;--sqv-lime:#d6f27a}
+.stApp {background:#f7f7fa;color:var(--sqv-ink)}
+.block-container {max-width:1480px;padding:2.2rem 2.8rem 4rem}
+#MainMenu,footer {visibility:hidden}
+h1,h2,h3 {letter-spacing:-.045em!important;font-weight:650!important}
+p, label {letter-spacing:-.01em}
+[data-testid="stSidebar"] {background:#242332;color:#f2f1fa;border-right:0}
+[data-testid="stSidebar"] h2,[data-testid="stSidebar"] h3,[data-testid="stSidebar"] label,[data-testid="stSidebar"] p,[data-testid="stSidebar"] .stCaption {color:#e4e1f1!important}
+[data-testid="stSidebar"] hr {border-color:#ffffff18}
+[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {font-size:.8rem}
+.sqv-brand {display:flex;align-items:center;gap:12px;font-size:24px;font-weight:800;letter-spacing:-1px;margin-bottom:5px;color:white}
+.sqv-brand span {background:#d6f27a;color:#242332;width:38px;height:38px;display:grid;place-items:center;border-radius:12px;font-size:22px}
+.sqv-brand-sub {color:#b3aec7;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:26px}
+.sqv-topline {display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#777583;margin-bottom:28px}
+.sqv-status {padding:6px 12px;border:1px solid #e0dfee;border-radius:30px;background:white;color:#666071}
+.sqv-status:before {content:' ';display:inline-block;width:6px;height:6px;background:#8b77ec;border-radius:50%;margin-right:7px}
+.sqv-hero {display:grid;grid-template-columns:1fr 220px;gap:32px;align-items:center;padding:0 0 28px}
+.sqv-eyebrow {font-size:11px;color:#7463ca;font-weight:750;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+.sqv-hero h1 {font-size:clamp(34px,4vw,55px);line-height:1.07;color:#242332;margin:0 0 16px;letter-spacing:-.055em!important}
+.sqv-hero h1 em {color:#6852e8;font-style:normal}
+.sqv-hero p {color:#777583;max-width:660px;line-height:1.7;font-size:14px;margin:0}
+.sqv-art {position:relative;height:164px;background:#eae6fc;border-radius:28px;overflow:hidden;display:flex;align-items:end;justify-content:center;gap:13px;padding:24px;transform:rotate(-3deg)}
+.sqv-art i {display:block;width:35px;background:#afa0ef;border-radius:9px;height:45%}.sqv-art i:nth-child(2){height:72%;background:#8974e1}.sqv-art i:nth-child(3){height:96%;background:#6852e8}.sqv-art i:nth-child(4){height:56%;background:#d6f27a}
+.sqv-warning {padding:13px 18px;background:#efedf8;color:#655b80;border:1px solid #e3dff0;border-radius:12px;margin:0 0 18px;font-size:12px;line-height:1.65}
+[data-testid="stMetric"] {background:white;padding:22px;border:1px solid #e8e7ee;border-radius:16px;box-shadow:0 3px 5px #24233302}
+[data-testid="stMetricLabel"] p {font-size:12px;color:#777583}
+[data-testid="stMetricValue"] {font-size:30px;font-weight:650;letter-spacing:-.055em;color:#302a49}
+[data-testid="stTabs"] {margin-top:24px}
+[data-baseweb="tab-list"] {gap:20px;border-bottom:1px solid #e2e0ea}
+[data-baseweb="tab"] {font-size:12px;padding:12px 2px;height:48px}
+[data-baseweb="tab-highlight"] {background:#6852e8;height:3px}
+[data-baseweb="tab-panel"] {padding-top:24px}
+[data-testid="stDataFrame"] {border-radius:12px;overflow:hidden;border:1px solid #e8e7ee}
+.stButton button,.stDownloadButton button {border-radius:10px;font-size:13px;padding:10px 16px;font-weight:600;transition:transform .15s}
+.stButton button:hover,.stDownloadButton button:hover {transform:translateY(-1px);border-color:#8a76e8;color:#6852e8}
+.stButton button[kind="primary"] {background:#6852e8;border-color:#6852e8;color:white}
+.sqv-selection {font-size:13px;color:#6b647c;margin:12px 0 20px;line-height:1.6}
+.sqv-selection b {color:#3d345c}
+.sqv-policy {background:white;border:1px solid #e7e4ef;border-radius:14px;padding:18px;margin-bottom:14px;min-height:142px}
+.sqv-policy small {color:#777583;font-size:11px}.sqv-policy strong {display:block;color:#6852e8;font-size:24px;letter-spacing:-.04em;margin:6px 0}.sqv-policy p {font-size:12px;color:#777583;margin:0}
+@media(max-width:800px){.block-container{padding:1.5rem 1rem}.sqv-hero{grid-template-columns:1fr}.sqv-art{display:none}.sqv-topline{margin-bottom:22px}.sqv-hero h1{font-size:36px}[data-baseweb="tab-list"]{gap:15px}}

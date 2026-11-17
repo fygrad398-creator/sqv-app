@@ -1,0 +1,28 @@
+# Blueprint de Render. El plan de 2 GB es de pago; revisarlo antes de desplegar.
+services:
+  - type: web
+    name: sqv-laboratorio
+    runtime: python
+    plan: 1c-2g
+    numInstances: 1
+    buildCommand: bash scripts/render-build.sh
+    startCommand: >-
+      python -m streamlit run app.py
+      --server.address=0.0.0.0
+      --server.port=$PORT
+      --server.headless=true
+      --server.fileWatcherType=none
+      --browser.gatherUsageStats=false
+    healthCheckPath: /_stcore/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: MPLCONFIGDIR
+        value: /tmp/sqv-matplotlib
+      - key: MPLBACKEND
+        value: Agg
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: OPENBLAS_NUM_THREADS
+        value: "1"

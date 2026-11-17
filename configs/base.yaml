@@ -1,0 +1,24 @@
+proyecto: SQV
+version: '1.2.0'
+fuente:
+  archivo: Matriz_15_productos_actualizada (1) (1).xlsx
+  hoja: Matriz_15
+  tipo: reference  # Precios/presentaciones de Excel; no validar como venta observada
+experimento:
+  rotation_k: [0.70, 1.00, 1.30]
+  stock_s: [0.75, 1.00, 1.50]
+  lambda_por_escala: {pequena: 5, mediana: 15, grande: 30}
+  funciones: [B, C]
+  politicas: [P0, P1, P2, P3]
+  distribuciones: [poisson, nbinom]
+  theta: 10 # Experimental: NO calibrado
+  beta_central: 2
+  alpha_por_categoria: {Panaderia: 0.81, Embutidos: 0.73, Lacteos: 1.02}
+  descuentos_p3: [0.00, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30]
+  precio_redondeo: full
+  semilla: 20261114
+  niveles_replicas: [1000, 5000, 10000, 50000, 100000]
+  tolerancia_relativa_ic: 0.02
+  tolerancia_absoluta_diferencias_soles: 0.05
+indicador_primario: perdida_potencial_ingresos_S/
+advertencia: 'Matriz referencial: ventas, stock mensual, vida util, elasticidad SKU y causalidad no verificados'

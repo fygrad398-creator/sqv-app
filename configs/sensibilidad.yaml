@@ -1,0 +1,10 @@
+variantes:
+  beta: [1, 2, 5]
+  multiplicador_alpha: [0.8, 1.0, 1.2]
+  pesos_w: [uniform, heterogeneous]
+  theta_nbinom: [5, 10, 30]
+  redondeo_precio: [full, cents]
+  calibracion_cruzada: [B_como_generador_C_como_decisor, C_como_generador_B_como_decisor]
+notas:
+  - 'W y L son dias; no hay reposicion ni donacion.'
+  - 'Todos los analisis sin matriz real se etiquetan como sinteticos.'
